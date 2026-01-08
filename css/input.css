@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { 
+    background-color: #050505; 
+    scroll-behavior: smooth; 
+    /* Mencegah pergeseran layout saat scrollbar muncul */
+    scrollbar-gutter: stable;
+  }
+  
+  body { 
+    @apply antialiased overflow-x-hidden bg-[#050505] text-white; 
+    font-family: 'Inter', sans-serif; 
+  }
+  
+  h1, h2, h3 { 
+    font-family: 'Unbounded', sans-serif; 
+    @apply tracking-tighter; 
+  }
+}
+
+@layer components {
+  /* Animasi Reveal saat Scroll */
+  section {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(8px);
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
+  }
+
+  section.active { 
+    opacity: 1; 
+    transform: translateY(0); 
+    filter: blur(0); 
+  }
+
+  /* Efek Teks Bergelombang */
+  .wave-text span {
+    display: inline-block;
+    animation: wave-animation 2.5s ease-in-out infinite;
+    animation-delay: calc(0.12s * var(--char-index));
+    will-change: transform;
+  }
+
+  /* Kursor Typewriting */
+  #typewriter-text::after {
+    content: '|';
+    @apply text-indigo-500 ml-1 font-bold;
+    animation: cursor-blink 0.8s infinite;
+  }
+
+  /* Glassmorphism Hover untuk Kartu Tugas */
+  .group:hover img {
+    @apply scale-[1.02] rotate-1;
+    transition: all 0.7s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+}
+
+/* Keyframes */
+@keyframes wave-animation {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  25% { transform: translateY(-10px) rotate(2deg); }
+  50% { transform: translateY(0) rotate(0); }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Scrollbar Styling (Modern & Minimalis) */
+::-webkit-scrollbar { 
+  width: 5px; 
+}
+
+::-webkit-scrollbar-track { 
+  background: #050505; 
+}
+
+::-webkit-scrollbar-thumb { 
+  background: linear-gradient(to bottom, #6366f1, #a855f7); 
+  border-radius: 20px; 
+}
+
+/* Fix untuk Mobile: Mengurangi intensitas animasi di layar kecil */
+@media (max-width: 768px) {
+  section {
+    transform: translateY(20px);
+    transition-duration: 0.8s;
+  }
+  
+  @keyframes wave-animation {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-4px); }
+  }
+}

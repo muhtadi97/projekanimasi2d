@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Animasi 2D - Mukhtadi Arijuddin">
+    <title>Blog | Mukhtadi Arijuddin</title>
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <link rel="stylesheet" href="dist/output.css">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#050505] text-white selection:bg-indigo-500 selection:text-white font-['Inter'] overflow-x-hidden">
+
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-900/20 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-900/20 blur-[120px] rounded-full"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 top-0 bg-black/50 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center font-black text-xl shadow-lg shadow-indigo-500/20 font-['Unbounded'] text-white">M</div>
+                <div class="hidden sm:block">
+                    <h2 class="font-bold tracking-tight leading-none text-lg font-['Unbounded'] text-white uppercase">Mukhtadi Arijuddin</h2>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-[0.2em]">NPM: 2524372085</span>
+                </div>
+            </div>
+            <div class="flex gap-4 md:gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                <a href="#storytelling" class="hover:text-white transition-all">StoryTelling</a>
+                <a href="#storyboard" class="hover:text-white transition-all">StoryBoard</a>
+                <a href="#animasi" class="hover:text-white transition-all">Animasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative">
+        <header class="pt-48 md:pt-64 pb-24 md:pb-32 px-6 md:px-8 text-center min-h-screen flex flex-col justify-center">
+            <h1 class="text-5xl sm:text-7xl md:text-[10rem] font-black tracking-tighter mb-8 uppercase leading-[0.9] font-['Unbounded']">
+                <span class="wave-text inline-block" data-text="Animasi">Animasi</span> <br> 
+                <span class="text-indigo-500 italic wave-text inline-block" data-text="2D.">2D.</span>
+            </h1>
+            
+            <div class="min-h-[80px] md:min-h-[60px] flex justify-center items-center">
+                <p id="typewriter-text" class="text-slate-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed"></p>
+            </div>
+
+            <div class="mt-16 animate-bounce text-slate-500">
+                <i class="fas fa-arrow-down text-2xl"></i>
+            </div>
+        </header>
+
+        <section id="storytelling" class="py-20 md:py-32 px-6 md:px-8 border-t border-white/5 transition-all duration-1000 transform translate-y-10 opacity-0">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-end justify-between mb-12">
+                    <div>
+                        <span class="text-indigo-500 font-mono mb-2 block tracking-widest uppercase text-xs">Tugas 01</span>
+                        <h2 class="text-4xl md:text-6xl font-black italic uppercase font-['Unbounded'] text-white">Storytelling</h2>
+                    </div>
+                </div>
+                <div class="relative group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 p-2 transition-all hover:border-indigo-500/50 shadow-2xl">
+                    <img src="assets/storytelling-hd.jpg" alt="Storytelling HD" class="w-full h-auto rounded-[1.5rem] grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
+                        <p class="text-xs md:text-sm font-bold tracking-widest uppercase">HD</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="storyboard" class="py-20 md:py-32 px-6 md:px-8 border-t border-white/5 transition-all duration-1000 transform translate-y-10 opacity-0">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-end justify-between mb-12">
+                    <div>
+                        <span class="text-purple-500 font-mono mb-2 block tracking-widest uppercase text-xs">Tugas 02</span>
+                        <h2 class="text-4xl md:text-6xl font-black italic uppercase font-['Unbounded'] text-white">Storyboard</h2>
+                    </div>
+                </div>
+                <div class="relative group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 p-2 transition-all hover:border-purple-500/50 shadow-2xl">
+                    <img src="assets/storyboard-hd.jpg" alt="Storyboard HD" class="w-full h-auto rounded-[1.5rem]">
+                </div>
+            </div>
+        </section>
+
+        <section id="animasi" class="py-20 md:py-32 px-6 md:px-8 border-t border-white/5 bg-white/[0.01] transition-all duration-1000 transform translate-y-10 opacity-0">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-end justify-between mb-12">
+                    <div>
+                        <span class="text-emerald-500 font-mono mb-2 block tracking-widest uppercase text-xs">Tugas 03</span>
+                        <h2 class="text-4xl md:text-6xl font-black italic uppercase leading-none font-['Unbounded'] text-white">Final Motion</h2>
+                    </div>
+                </div>
+                <div class="relative aspect-video rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-[0_0_80px_rgba(79,70,229,0.15)] border border-white/10 bg-black">
+                    <iframe class="w-full h-full" 
+                        src="https://www.youtube.com/embed/6sofk4Y5KcM?rel=0&showinfo=0&modestbranding=1" 
+                        title="Hasil Animasi Motion Mukhtadi" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-24 px-8 border-t border-white/5 text-center bg-black">
+        <div class="max-w-2xl mx-auto">
+            <h3 class="text-xl md:text-2xl font-bold mb-4 italic font-['Unbounded'] uppercase text-white">Mukhtadi Arijuddin</h3>
+            <p class="text-slate-500 mb-8 uppercase tracking-[0.3em] text-[10px]">Teknologi Informasi &bull; NPM 2524372085</p>
+            <div class="h-[2px] w-12 bg-indigo-500 mx-auto mb-10"></div>
+            <p class="text-slate-600 text-[10px] tracking-widest italic uppercase font-medium"> Universitas Pembangunan Pancabudi &bull; 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
